@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+  --primary-color: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(5, 97, 179, 1) 66%, rgba(0, 212, 255, 1) 100%);
+  /*VARIAVEL DE COR*/
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.tabela {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 150px;
+  height: 300px;
+}
+
+.tabela-esquerda,
+.tabela-direita {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: #077ceb99;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+/*ADD PARA RESULTADOS*/
+#resultado {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.paragrafo-resultado,
+.bad {
+  background: rgb(109, 255, 182);
+  padding: 10px 20px;
+}
+
+.bad {
+  background: rgb(255, 150, 150);
+}
+
+
+
+/*responsiv*/
+
+@media screen and (max-width: 425px)  {
+  .container {
+  margin: auto;
+  font-size: 12px;
+  width: 70%;
+  }
+  .titulo{
+    font-size: medium;
+  }
+  .tabela{
+    
+    font-size: 12px;
+    height: inherit;
+    gap: 1px;
+
+  }
+  form, input {
+    font-size: 12px;
+  }
+  form input{
+    height: 40px ;
+  }
+  label{
+    font-size: 15px;
+  }
+  button{
+    
+  }
+
+}
+@media screen and (max-width: 375px) {
+  .container {
+  font-size: 12px;
+  }
+  .titulo{
+    font-size: small;
+  }
+  .tabela{
+    
+    font-size: 10px;
+
+  }
+  form input{
+    height: 40px;
+    padding: 0 10px;
+  }
+  form, input {
+    font-size: 10px;
+  }
+ 
+
+}
